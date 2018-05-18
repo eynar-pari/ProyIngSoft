@@ -13,30 +13,7 @@ public class Database {
 	private static final EntityManagerFactory ENTITY_MANAGER_FACTORY = Persistence
 			.createEntityManagerFactory("Upb");
 
-	public  void main(String[] args) {
 
-		// Create two Students
-		create(1, "Libro1", "test"); // Alice will get an id 1
-		create(2, "Libro2", "test1"); // Bob will get an id 2
-		create(3, "Libro3", "test3"); // Charlie will get an id 3
-
-		// Update the age of Bob using the id
-		update(2, "Bob", "abc");
-
-		// Delete the Alice from database
-		delete(1);
-
-		// Print all the Students
-		List<Libro> libros = readAll();
-		if (libros != null) {
-			for (Libro stu : libros) {
-				System.out.println(stu);
-			}
-		}
-
-		// NEVER FORGET TO CLOSE THE ENTITY_MANAGER_FACTORY
-		ENTITY_MANAGER_FACTORY.close();
-	}
 
     public Database(){}
 
@@ -164,4 +141,29 @@ public class Database {
 			manager.close();
 		}
 	}
+
+//    public static void main(String[] args) {
+//        Database a = new Database();
+//        // Create two Students
+//        a.create(1, "Libro1", "test"); // Alice will get an id 1
+//        a.create(2, "Libro2", "test1"); // Bob will get an id 2
+//        a.create(3, "Libro3", "test3"); // Charlie will get an id 3
+//
+//        // Update the age of Bob using the id
+//        a.update(2, "Bob", "abc");
+//
+//        // Delete the Alice from database
+//        a.delete(1);
+//
+//        // Print all the Students
+//        List<Libro> libros = a.readAll();
+//        if (libros != null) {
+//            for (Libro stu : libros) {
+//                System.out.println(stu);
+//            }
+//        }
+//
+//        // NEVER FORGET TO CLOSE THE ENTITY_MANAGER_FACTORY
+//        ENTITY_MANAGER_FACTORY.close();
+//    }
 }

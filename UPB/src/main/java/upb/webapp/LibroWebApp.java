@@ -57,7 +57,6 @@ public class LibroWebApp {
 }
 
 
-
 //    public  static void main(String [] args) {
 //        new Database().create(15, "TESTING", "TESTING");
 //        new Database().closeDataBase();
